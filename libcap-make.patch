@@ -1,0 +1,25 @@
+diff -aurN libcap-2.22.orig/Make.Rules libcap-2.22/Make.Rules
+--- libcap-2.22.orig/Make.Rules	2012-07-25 00:55:28.021519889 +0200
++++ libcap-2.22/Make.Rules	2012-07-25 00:57:14.962519871 +0200
+@@ -48,18 +48,18 @@
+ IPATH += -fPIC -I$(topdir)/libcap/include -I$(KERNEL_HEADERS)
+ 
+ CC := gcc
+-CFLAGS := -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
++CFLAGS := $(OPTCFLAGS) -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+ BUILD_CC := $(CC)
+ BUILD_CFLAGS := $(CFLAGS) $(IPATH)
+ AR := ar
+ RANLIB := ranlib
+-DEBUG = -g #-DDEBUG
++DEBUG = #-DDEBUG
+ WARNINGS=-Wall -Wwrite-strings \
+         -Wpointer-arith -Wcast-qual -Wcast-align \
+         -Wstrict-prototypes -Wmissing-prototypes \
+         -Wnested-externs -Winline -Wshadow
+ LD=$(CC) -Wl,-x -shared
+-LDFLAGS := #-g
++LDFLAGS := $(OPTLDFLAGS)
+ 
+ SYSTEM_HEADERS = /usr/include
+ INCS=$(topdir)/libcap/include/sys/capability.h
