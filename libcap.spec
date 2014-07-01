@@ -4,7 +4,7 @@ Version:	2.22
 Release:	1
 Epoch:		1
 License:	GPL or BSD
-Group:		Applications/System
+Group:		Core/System
 # git://git.kernel.org/pub/scm/linux/kernel/git/morgan/libcap.git
 Source0:	%{name}-%{version}.tar.xz
 # Source0-md5:	e849bdf1a8e96f616fbbe6055242dccb
