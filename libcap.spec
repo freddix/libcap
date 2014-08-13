@@ -1,13 +1,12 @@
 Summary:	POSIX.1e capability suite
 Name:		libcap
-Version:	2.22
+Version:	2.24
 Release:	1
 Epoch:		1
 License:	GPL or BSD
 Group:		Core/System
-# git://git.kernel.org/pub/scm/linux/kernel/git/morgan/libcap.git
-Source0:	%{name}-%{version}.tar.xz
-# Source0-md5:	e849bdf1a8e96f616fbbe6055242dccb
+Source0:	https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/%{name}-%{version}.tar.xz
+# Source0-md5:	d43ab9f680435a7fff35b4ace8d45b80
 Patch0:		%{name}-make.patch
 URL:		http://sites.google.com/site/fullycapable/
 BuildRequires:	attr-devel
@@ -82,6 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libcap.so
 %{_includedir}/sys/capability.h
+%{_pkgconfigdir}/*.pc
 %{_mandir}/man3/libcap*.3*
 %{_mandir}/man3/cap_*
 %{_mandir}/man3/capgetp.3*
