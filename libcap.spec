@@ -1,7 +1,8 @@
+# based on PLD Linux spec git://git.pld-linux.org/packages/libcap.git
 Summary:	POSIX.1e capability suite
 Name:		libcap
 Version:	2.24
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL or BSD
 Group:		Core/System
